@@ -6,10 +6,11 @@ import com.karenbstewart.perfectPresents.repositories.GiftRepository;
 import com.karenbstewart.perfectPresents.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DataLoader {
+public class DataLoader implements ApplicationRunner {
 
     @Autowired
     PersonRepository personRepository;
@@ -34,7 +35,7 @@ public class DataLoader {
         Gift raspberryPi = new Gift("Raspberry Pi 3B+", "https://techstuff", 34.94, Sean);
         giftRepository.save(raspberryPi);
         Gift fluffypenguin = new Gift("toy penguin", "https://Amazon", 26.00, Sean);
-
+        giftRepository.save(fluffypenguin);
 
     }
 }
