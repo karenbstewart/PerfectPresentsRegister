@@ -27,7 +27,19 @@ public class GiftController {
     @PostMapping(value = "/gifts")
     public ResponseEntity<Gift> postGift(@RequestBody Gift gift){
         giftRepository.save(gift);
-        return 
+        return new ResponseEntity<>(gift, HttpStatus.CREATED);
+    }
+
+    @PatchMapping(value = "/gifts/{id}")
+    public ResponseEntity<Gift> updateGift(@RequestBody Gift gift){
+        giftRepository.save(gift);
+        return new ResponseEntity<>(gift, HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "/gifts/{id}")
+    public ResponseEntity<Gift> deleteGift(@PathVariable Long id) {
+        Gift found = giftRepository.getById(id);
+        return new ResponseEntity<>(null,HttpStatus.OK);
     }
 
 
