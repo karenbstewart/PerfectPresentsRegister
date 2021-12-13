@@ -29,7 +29,7 @@ public class DataLoader implements ApplicationRunner {
 
         Gift Sloth_oodie = new Gift("sloth ooodie", "https://theoodie.co.uk/products/sloth-oodie?awc=23760_1639409335_04569aa40e930e8f248525fbc54f1b86", 59.00, Aiden);
         giftRepository.save(Sloth_oodie);
-        Gift Sloth_bottle =  new Gift("sloth bottle", "https.thesothbottlecompany", 25.45, Aiden);
+        Gift Sloth_bottle =  new Gift("sloth bottle", "https.theslothbottlecompany", 25.45, Aiden);
         giftRepository.save(Sloth_bottle);
 
         Gift raspberryPi = new Gift("Raspberry Pi 3B+", "https://techstuff", 34.94, Sean);

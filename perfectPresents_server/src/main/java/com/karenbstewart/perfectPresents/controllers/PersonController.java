@@ -28,7 +28,7 @@ public class PersonController {
     @PostMapping(value = "/people")
     public ResponseEntity<Person> createPerson(@RequestBody Person person){
         personRepository.save(person);
-        return new ResponseEntity<>(person, HttpStatus.OK);
+        return new ResponseEntity<>(person, HttpStatus.CREATED);
     }
 
     @PatchMapping(value = "/people/{id}")
