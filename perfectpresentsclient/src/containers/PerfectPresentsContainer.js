@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Request from '../helpers/request';
-import PeopleList from '../components/people/peopleList';
+import PeopleList from '../components/people/PeopleList';
+import PersonDetail from '../components/people/PersonDetail';
+import GiftList from '../components/gifts/GiftList';
+
 
 
 const PerfectPresentsContainer = () => {
@@ -25,18 +28,48 @@ const PerfectPresentsContainer = () => {
         requestAll()
     }, [])
 
+    const findPersonById = function(id){
+        return people.find((person) => {
+          return person.id === parseInt(id);
+        })
+      }
+
+      
+
     if(!people){
         return null
     }
     return(
     <>
         <Router>
-        <Routes>
-        <Route
-            path='/'
-            element={<PeopleList people={people} />}
-        />
-        </Routes>
+        
+        <Switch>
+
+        <Route exact path="/people/:id" render={(props) =>{
+            const id = props.match.params.id;
+            const person = findPersonById(id);
+            return <PersonDetail person = {person}
+            />
+        }} /> 
+        
+        <Route exact path="/gifts" render={() => {
+            return <GiftList gifts={gifts} />
+        }} />
+
+        <Route render={() => {
+        return <PeopleList people={people} />
+        {/* element={<GiftList gifts={gifts} />} */}
+      }} />
+
+
+
+        
+        
+       
+        
+ 
+        
+        </Switch>
         </Router>
         </>
     )

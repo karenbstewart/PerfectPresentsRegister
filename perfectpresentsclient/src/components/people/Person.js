@@ -11,9 +11,9 @@ const Person = ({person}) => {
 
   return (
     <>
-    {/* <Link to = {url} className="name">
+    <Link to = {url} className="name">
     {person.firstName} {person.lastName}
-    </Link> */}
+    </Link>
     <p> {person.firstName}</p>
     </>
   )
