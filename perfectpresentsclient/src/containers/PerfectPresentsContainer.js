@@ -25,22 +25,19 @@ const PerfectPresentsContainer = () => {
         requestAll()
     }, [])
 
-    // if(!people){
-    //     return null
-    // }
+    if(!people){
+        return null
+    }
     return(
     <>
         <Router>
-        
         <Routes>
-
-        <Route render={() => {
-            return< PeopleList people={people}/>
-        }}/>
+        <Route
+            path='/'
+            element={<PeopleList people={people} />}
+        />
         </Routes>
-        
         </Router>
-
         </>
     )
 
