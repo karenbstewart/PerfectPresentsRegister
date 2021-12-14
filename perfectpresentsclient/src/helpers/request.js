@@ -19,7 +19,7 @@ class Request {
         body: JSON.stringify(payload)
       })
     }
-// adding some comment 
+ 
     patch(url, payload){
       return fetch(url, {
         method: "PATCH",
