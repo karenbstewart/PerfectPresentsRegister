@@ -33,7 +33,13 @@ const PerfectPresentsContainer = () => {
         return people.find((person) => {
           return person.id === parseInt(id);
         })
-      }
+    }
+
+    const handlePost = function(gift){
+        const request = new Request();
+        request.post("/api/gifts", gift)
+        .then(() => window.location = '/people')
+    }
 
       
 
@@ -58,7 +64,7 @@ const PerfectPresentsContainer = () => {
         }} />
 
         <Route exact path="/gifts/new" render={()=>{
-            return <GiftForm people={people}/>
+            return <GiftForm people={people} onCreate={handlePost}/>
         }} />
 
         <Route render={() => {
