@@ -8,7 +8,7 @@ const NavBar = () => {
 
   
           <a href="/people">Horton hears a who</a>
-      
+          <a href="/gifts/new">add gift to person</a>
 
       <p>nav bar text</p>
       <hr/>

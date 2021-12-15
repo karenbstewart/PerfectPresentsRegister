@@ -4,6 +4,7 @@ import Request from '../helpers/request';
 import PeopleList from '../components/people/PeopleList';
 import PersonDetail from '../components/people/PersonDetail';
 import GiftList from '../components/gifts/GiftList';
+import GiftForm from '../components/gifts/Giftform';
 
 
 
@@ -56,6 +57,10 @@ const PerfectPresentsContainer = () => {
             return <GiftList gifts={gifts} />
         }} />
 
+        <Route exact path="/gifts/new" render={()=>{
+            return <GiftForm people={people}/>
+        }} />
+
         <Route render={() => {
         return <PeopleList people={people} />
         {/* element={<GiftList gifts={gifts} />} */}
@@ -64,10 +69,6 @@ const PerfectPresentsContainer = () => {
 
 
         
-        
-       
-        
- 
         
         </Switch>
         </Router>
