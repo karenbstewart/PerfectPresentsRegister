@@ -5,6 +5,8 @@ import PeopleList from '../components/people/PeopleList';
 import PersonDetail from '../components/people/PersonDetail';
 import GiftList from '../components/gifts/GiftList';
 import GiftForm from '../components/gifts/Giftform';
+import HomePage from '../components/people/HomePage';
+
 
 
 
@@ -65,6 +67,10 @@ const PerfectPresentsContainer = () => {
 
         <Route exact path="/gifts/new" render={()=>{
             return <GiftForm people={people} onCreate={handlePost}/>
+        }} />
+
+        <Route exact path="/home" render={() => {
+            return <HomePage />
         }} />
 
         <Route render={() => {

@@ -9,7 +9,7 @@ const NavBar = () => {
         <img src="/images/gifts.jpg" alt="Logo" width="100px"/>
         <p>Perfect<span>Presents</span></p>
 
-        <a href="/">Home Page</a>
+        <a href="/home">Home Page</a>
         <a href="/people">List Accounts</a>
         <a href="/gifts/new">Add a gift</a>
         <a href="*">Mystery gift idea</a>
