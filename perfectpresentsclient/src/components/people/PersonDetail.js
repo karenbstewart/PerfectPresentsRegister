@@ -5,19 +5,19 @@ import Gift from '../gifts/Gift';
 
 const PersonDetail = ({person}) => {
 
+    if (person.gifts){
+
+    
+
        const giftItems = person.gifts.map((gift) => {
          return (
              <li>
                  <Gift gift = {gift}/>
+                 <p>this!!!</p>
              </li>
          )
      })
 
-    // const giftItems = person.gifts.map((gift) => {
-    //     return (
-    //         <Gift gift = {gift}/>
-    //     )
-    // })
 
 return(
     <>
@@ -31,7 +31,10 @@ return(
 )
     
 }
-
+else{
+    return <p>loading ....</p>
+}
+}
 export default PersonDetail;
 
 

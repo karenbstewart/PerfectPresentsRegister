@@ -8,20 +8,10 @@ import NavBar from '../components/NavBar';
 
 const MainContainer = () => {
     return (
-        // <Router>
-        // <>
-        //     <Routes>
-
-        //         <Route path="/" component= {PerfectPresentsContainer}/>
-        //     </Routes>
-        // </>
-            
-        // </Router>
         <>
             <NavBar/>
             <PerfectPresentsContainer/> 
-        </>
-        
+        </>       
     )
 }
 

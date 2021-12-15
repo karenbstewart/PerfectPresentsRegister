@@ -38,7 +38,7 @@ const PerfectPresentsContainer = () => {
     const handlePost = function(gift){
         const request = new Request();
         request.post("/api/gifts", gift)
-        .then(() => window.location = '/people')
+        .then(() => window.location = '/people/')
     }
 
       

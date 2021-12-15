@@ -5,14 +5,18 @@ const GiftList = ({gifts}) => {
     const giftItem = gifts.map((gift) => {
         return (<li key = {Gift.id}>
         <Gift gift={gift}/>
+        
         </li>
     )
     })
 
     return(
-        <ul>
-            {giftItem}
-        </ul>
+        <div className="gift_unordered_list">
+           <ul>
+                {giftItem}
+            </ul>  
+        </div>
+        
     )
 }
 

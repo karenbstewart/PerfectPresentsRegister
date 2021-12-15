@@ -7,6 +7,7 @@ const Gift = ({gift})=> {
             <p>{gift.title}</p>
             <p>{gift.gift_url}</p>
             <p>{gift.price}</p>
+            <input type="checkbox"/>
         </div>
     )
 }

@@ -10,6 +10,7 @@ const GiftForm = ({people, onCreate})=> {
             price:0
         }
     )
+    const [selectedPerson, setSelectedPerson] = useState(null)
 
     const handleChange = function(event){
         let propertyName = event.target.name;
@@ -24,11 +25,12 @@ const GiftForm = ({people, onCreate})=> {
         let copiedGift = {...stateGift};
         copiedGift['person'] = selectedPerson
         setStateGift(copiedGift)
+        setSelectedPerson(event.target.value)
     }
     
     const handleSubmit = function(event){
         event.preventDefault();
-        onCreate(stateGift);
+        onCreate(stateGift, selectedPerson);
     }
     
 //for editing when there is a gift passed in for a particular person
