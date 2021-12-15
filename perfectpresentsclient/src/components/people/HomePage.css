@@ -1,3 +1,18 @@
-.quote{
-    padding:300px;
+@import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+@font-face {
+    font-family:  'Seaweed Script', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
 }
+
+.quote{
+    padding:200px;
+    width:40%;
+    margin:auto;
+    text-align: center;
+    font-size:70px;
+    font-family:  'Seaweed Script', cursive;
+    
+}
+
+
+
