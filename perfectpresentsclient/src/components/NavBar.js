@@ -7,14 +7,14 @@ const NavBar = () => {
     <header>
     <div className="NavBarContainer">
         <img src="/images/gifts.jpg" alt="Logo" width="100px"/>
-        <p>PerfectPresents</p>
+        <p>Perfect<span>Presents</span></p>
 
         <a href="/">Home Page</a>
         <a href="/people">List Accounts</a>
         <a href="/gifts/new">Add a gift</a>
         <a href="*">Mystery gift idea</a>
     </div>
-    <hr/> 
+    
     </header>
   )
 }

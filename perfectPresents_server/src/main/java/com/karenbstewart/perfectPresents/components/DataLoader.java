@@ -26,6 +26,10 @@ public class DataLoader implements ApplicationRunner {
         personRepository.save(Aiden);
         Person Sean = new Person("Séan", "Stewart", "sean@gmail.com");
         personRepository.save(Sean);
+        Person Rachael = new Person("Rachael", "Bryce", "rachbryce@gmail.com");
+        personRepository.save(Rachael);
+        Person Savannah = new Person("Savannah", "Bryce", "sb@gmail.com");
+        personRepository.save(Savannah);
 
         Gift Sloth_oodie = new Gift("sloth ooodie", "https://theoodie.co.uk/products/sloth-oodie?awc=23760_1639409335_04569aa40e930e8f248525fbc54f1b86", 59.00, Aiden);
         giftRepository.save(Sloth_oodie);

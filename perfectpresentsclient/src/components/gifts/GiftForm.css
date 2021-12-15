@@ -1,0 +1,32 @@
+.formContainer{
+    padding-top: 150px;
+    width:40%;
+    margin:auto;
+    
+}
+
+.formItems{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formItems > input{
+    padding:10px;
+    margin-bottom:10px;
+    
+}
+
+.formItems > select{
+    padding:10px;
+    margin-bottom:10px;
+    font-size: 20px;
+}
+
+.formItems > button{
+    padding:10px;
+    margin-bottom:10px;
+    font-size: 20px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+

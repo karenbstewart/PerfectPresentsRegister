@@ -14,7 +14,7 @@ const Person = ({person}) => {
     <Link to = {url} className="name">
     {person.firstName} {person.lastName}
     </Link>
-    <p> {person.firstName}</p>
+    
     </>
   )
 }

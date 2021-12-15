@@ -3,6 +3,31 @@
     flex-direction:row;
     justify-content: space-around;
     align-items: center; 
+    /* border-bottom: 1px solid black; */
+    box-shadow: 0 6px 5px -5px rgba(0,0,0,0.5);
+    position:fixed;
+    background-color: #ffffff;
+    width:100%;
+}
+
+.NavBarContainer > p{
+    font-size: 30px;
+}
+
+.NavBarContainer > p > span{
+    color:#ff0000;
+}
+
+.NavBarContainer > a{
+    text-decoration: none;
+    color:#000000;
+    padding:25px;
+}
+
+.NavBarContainer > a:hover{
+    background-color:#f7f7f7;
+    color:#ff0000;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
 }
 
 

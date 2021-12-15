@@ -1,6 +1,7 @@
 import React from 'react';
 import PerfectPresentsContainer from '../../containers/PerfectPresentsContainer';
 import Person from './Person';
+import './PersonList.css';
 
 
 const PeopleList = ({people}) => {
@@ -13,16 +14,20 @@ const PeopleList = ({people}) => {
         return (
             <li key={index} className="component-item">
 	        <div className="component">
-	        <Person person={person} />
+	            <Person person={person} />
 	        </div>
 	        </li>
         )
     })
 
     return (
-        <ul>
-            {personItem}
-        </ul>
+        <div className='PersonListDiv'>
+            <p><span>Pick a user from the list below:</span></p>
+            <ul>
+                {personItem}
+            </ul>
+        </div>
+        
     )
 }
 
